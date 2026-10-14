@@ -1,0 +1,18 @@
+project:
+  name: "AI-Powered Customer Churn & Revenue Intelligence Platform"
+  version: "1.0.0"
+
+data:
+  raw_path: "Data_Engineering/data/raw"
+  processed_path: "Data_Engineering/data/processed"
+
+model:
+  target_column: "Churn"
+  test_size: 0.20
+  random_state: 42
+
+output:
+  model_path: "AI_Machine_Learning/models"
+  reports_path: "Shared/reports"
+  figures_path: "Shared/reports/figures"
+  outputs_path: "Shared/reports/outputs"
