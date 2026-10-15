@@ -128,3 +128,10 @@ AI-Customer-Churn-Revenue-Intelligence/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
+
+## 📊 Dashboard Preview
+
+![AI Customer Churn & Revenue Intelligence Dashboard](dashboard_preview.png)
+
+*Interactive Power BI dashboard showing customer churn, revenue at risk, and retention priorities.*
