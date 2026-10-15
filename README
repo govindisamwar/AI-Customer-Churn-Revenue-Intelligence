@@ -34,19 +34,21 @@ The platform combines data engineering, exploratory data analysis (EDA), machine
 
 This project uses the IBM Telco Customer Churn dataset.
 
-- **Total customers:** 7,043
-- **Customers who churned:** 1,869
-- **Customers who did not churn:** 5,174
-- **Overall churn rate:** 26.54%
+| Metric | Value |
+|---|---:|
+| Total customers | 7,043 |
+| Customers who churned | 1,869 |
+| Customers who did not churn | 5,174 |
+| Overall churn rate | 26.54% |
 
 The dataset contains customer demographics, services, contract types, tenure, monthly charges, and churn status.
 
 ## 🔎 Key Analytical Insights
 
-The exploratory analysis identified several patterns:
+Exploratory data analysis identified the following patterns:
 
 - **Contract type:** Month-to-month customers have a higher churn rate than customers with longer-term contracts.
-- **Tenure:** Customers with shorter tenure show higher churn rates.
+- **Tenure:** Customers with shorter tenure tend to have higher churn rates.
 - **Internet service:** Fiber optic customers have a higher observed churn rate than DSL customers in this dataset.
 - **Retention opportunities:** Customers with elevated churn risk can be prioritized for targeted retention campaigns.
 
@@ -66,15 +68,16 @@ An XGBoost classification pipeline was trained to predict customer churn.
 | F1-score | 56.46% |
 | ROC-AUC | 83.66% |
 
-The ROC-AUC score indicates that the model can distinguish between churn and non-churn customers reasonably well. Recall can be improved further to identify more customers who eventually churn.
+The ROC-AUC score indicates that the model can distinguish between churn and non-churn customers reasonably well. The recall score also highlights an opportunity to improve the identification of customers who eventually churn.
 
 ## 🧠 Explainable AI
 
-SHAP was used to help explain model predictions and understand which features contribute to churn predictions.
+SHAP (SHapley Additive exPlanations) was used to help interpret model predictions and understand which features contribute to churn predictions.
 
-The project includes visual outputs for:
-- SHAP summary analysis.
-- SHAP feature importance.
+The project includes:
+
+- SHAP summary plot.
+- SHAP feature importance plot.
 
 ## 💰 Revenue Intelligence
 
@@ -88,24 +91,32 @@ The revenue risk analysis categorizes customers into high-, medium-, and low-ris
 | Estimated monthly revenue exposure | $139,030.10 |
 | Estimated annual revenue exposure | $1,668,361.17 |
 
-**Important:** Revenue exposure is an estimate based on the project's methodology. It represents potential exposure, not confirmed revenue loss or guaranteed savings.
+> **Important:** Revenue exposure is an estimate based on the project's methodology. It represents potential exposure, not confirmed revenue loss or guaranteed savings.
 
 ## 📈 Power BI Dashboard
 
-The Power BI dashboard presents key business metrics and customer segments, including:
+The interactive Power BI dashboard presents key business metrics and customer segments, including:
 
 - Churn rate.
 - Monthly and annual revenue at risk.
 - Customer churn by contract type.
 - Customer distribution by churn risk.
-- Retention priority analysis.
+- Customer retention priority analysis.
 - Customer distribution by internet service.
 
-Dashboard file:
+### Dashboard File
+
+The Power BI report is available at:
 
 `Business_Intelligence/AI_Customer_Churn_Revenue_Intelligence.pbix`
 
-Download the repository to open the dashboard in Microsoft Power BI Desktop.
+Download the repository and open the `.pbix` file using Microsoft Power BI Desktop.
+
+## 📊 Dashboard Preview
+
+![AI Customer Churn and Revenue Intelligence Power BI Dashboard](dashboard_preview.png)
+
+*Power BI dashboard displaying customer churn, revenue exposure, customer risk categories, and retention priorities.*
 
 ## 📁 Project Structure
 
@@ -128,10 +139,3 @@ AI-Customer-Churn-Revenue-Intelligence/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-```
-
-## 📊 Dashboard Preview
-
-![AI Customer Churn & Revenue Intelligence Dashboard](dashboard_preview.png)
-
-*Interactive Power BI dashboard showing customer churn, revenue at risk, and retention priorities.*
