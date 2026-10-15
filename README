@@ -1,0 +1,130 @@
+# 🚀 AI-Powered Customer Churn & Revenue Intelligence Platform
+
+An end-to-end data analytics and machine learning project that predicts customer churn, identifies at-risk customers, and estimates potential revenue exposure using Python, machine learning, and Power BI.
+
+## 📌 Project Overview
+
+Customer churn is a major challenge for subscription-based businesses. This project analyzes customer behavior, predicts churn probability, identifies important churn drivers, and supports data-driven customer retention strategies.
+
+The platform combines data engineering, exploratory data analysis (EDA), machine learning, explainable AI, revenue risk analysis, and business intelligence.
+
+## 🎯 Project Objectives
+
+- Predict customers who are likely to churn.
+- Identify important factors associated with customer churn.
+- Segment customers by churn risk.
+- Estimate monthly and annual revenue at risk.
+- Recommend customer retention actions.
+- Present business insights through an interactive Power BI dashboard.
+
+## 🛠️ Technologies Used
+
+| Category | Tools |
+|---|---|
+| Programming | Python |
+| Data Analysis | Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn, XGBoost |
+| Explainable AI | SHAP |
+| Business Intelligence | Microsoft Power BI |
+| Data Processing | Python, CSV |
+| Version Control | Git, GitHub |
+
+## 📊 Dataset
+
+This project uses the IBM Telco Customer Churn dataset.
+
+- **Total customers:** 7,043
+- **Customers who churned:** 1,869
+- **Customers who did not churn:** 5,174
+- **Overall churn rate:** 26.54%
+
+The dataset contains customer demographics, services, contract types, tenure, monthly charges, and churn status.
+
+## 🔎 Key Analytical Insights
+
+The exploratory analysis identified several patterns:
+
+- **Contract type:** Month-to-month customers have a higher churn rate than customers with longer-term contracts.
+- **Tenure:** Customers with shorter tenure show higher churn rates.
+- **Internet service:** Fiber optic customers have a higher observed churn rate than DSL customers in this dataset.
+- **Retention opportunities:** Customers with elevated churn risk can be prioritized for targeted retention campaigns.
+
+These findings describe patterns in the dataset and do not necessarily establish causation.
+
+## 🤖 Machine Learning Model
+
+An XGBoost classification pipeline was trained to predict customer churn.
+
+### Model Performance
+
+| Metric | Score |
+|---|---:|
+| Accuracy | 79.42% |
+| Precision | 64.38% |
+| Recall | 50.27% |
+| F1-score | 56.46% |
+| ROC-AUC | 83.66% |
+
+The ROC-AUC score indicates that the model can distinguish between churn and non-churn customers reasonably well. Recall can be improved further to identify more customers who eventually churn.
+
+## 🧠 Explainable AI
+
+SHAP was used to help explain model predictions and understand which features contribute to churn predictions.
+
+The project includes visual outputs for:
+- SHAP summary analysis.
+- SHAP feature importance.
+
+## 💰 Revenue Intelligence
+
+The revenue risk analysis categorizes customers into high-, medium-, and low-risk groups.
+
+| Indicator | Result |
+|---|---:|
+| High-risk customers | 730 |
+| Medium-risk customers | 1,292 |
+| Low-risk customers | 5,021 |
+| Estimated monthly revenue exposure | $139,030.10 |
+| Estimated annual revenue exposure | $1,668,361.17 |
+
+**Important:** Revenue exposure is an estimate based on the project's methodology. It represents potential exposure, not confirmed revenue loss or guaranteed savings.
+
+## 📈 Power BI Dashboard
+
+The Power BI dashboard presents key business metrics and customer segments, including:
+
+- Churn rate.
+- Monthly and annual revenue at risk.
+- Customer churn by contract type.
+- Customer distribution by churn risk.
+- Retention priority analysis.
+- Customer distribution by internet service.
+
+Dashboard file:
+
+`Business_Intelligence/AI_Customer_Churn_Revenue_Intelligence.pbix`
+
+Download the repository to open the dashboard in Microsoft Power BI Desktop.
+
+## 📁 Project Structure
+
+```text
+AI-Customer-Churn-Revenue-Intelligence/
+│
+├── AI_Machine_Learning/
+├── Business_Intelligence/
+│   ├── retention/
+│   ├── revenue/
+│   └── AI_Customer_Churn_Revenue_Intelligence.pbix
+├── Data_Analytics/
+├── Data_Engineering/
+├── ML_Modeling/
+│   ├── explainability/
+│   └── src/
+├── Revenue_Intelligence/
+├── Shared/
+├── main.py
+├── requirements.txt
+├── README.md
+└── .gitignore
